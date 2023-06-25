@@ -1,38 +1,38 @@
 <div *ngIf="car">
   <h2>{{car.name | uppercase}} Details</h2>
   <div><span>Id: </span>{{car.id}}</div>
-  <div><span>Marka: </span>{{car.mark_of_car}}</div>
-  <div><span>Model: </span>{{car.model_of_car}}</div>
+  <div><span>Marka: </span>{{car.markOfCar}}</div>
+  <div><span>Model: </span>{{car.modelOfCar}}</div>
   <div><span>Segment: </span>{{car.segment}}</div>
-  <div><img src="{{car.img_src_of_car}}"></div>
-  <div><span>Typ silnika: </span>{{car.type_of_fuel}}</div>
+  <div><img src="{{car.imgSrcOfCar}}"></div>
+  <div><span>Typ silnika: </span>{{car.typeOfFuel}}</div>
   <div *ngIf="[car.climatronic]">
     <div><span>Klimatyzacja manualna: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
   </div>
-  <div *ngIf="[car.electric_shield]">
-    <div><span>Elektryczne szyby: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
+  <div *ngIf="[car.electricShield]">
+    <div><span>Elektryczne szyby: </span><mat-icon>check_circle_outline</mat-icon></div>
   </div>
-  <div *ngIf="[car.electric_mirrors]">
+  <div *ngIf="[car.electricMirrors]">
     <div><span>Elektryczne lusterka: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
   </div>
-  <div *ngIf="[car.stationary_computer]">
+  <div *ngIf="[car.stationaryComputer]">
     <div><span>Komputer pokładowy: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
   </div>
-  <div *ngIf="[car.automatic_door_close]">
+  <div *ngIf="[car.automaticDoorClose]">
     <div><span>Centralny zamek: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
   </div>
-  <div><span>Pojemność silnika: </span>{{car.capacity_of_engine}}</div>
-  <div><span>Moc silnika: </span>{{car.horse_power}}</div>
-  <div><span>Spalanie w mieście: </span>{{car.fuel_burn_in_city}}</div>
-  <div><span>Spalanie w trasie: </span>{{car.fuel_burn_on_road}}</div>
-  <div><span>Ilość poduszek powietrznych: </span>{{car.amount_of_air_bags}}</div>
-  <div><span>Ilość drzwi: </span>{{car.amount_of_doors}}</div>
+  <div><span>Pojemność silnika: </span>{{car.capacityOfEngine}}</div>
+  <div><span>Moc silnika: </span>{{car.horsePower}}</div>
+  <div><span>Spalanie w mieście: </span>{{car.fuelBurnInCity}}</div>
+  <div><span>Spalanie w trasie: </span>{{car.fuelBurnOnRoad}}</div>
+  <div><span>Ilość poduszek powietrznych: </span>{{car.amountOfAirBags}}</div>
+  <div><span>Ilość drzwi: </span>{{car.amountOfDoors}}</div>
   <div *ngIf="[car.abs]">
     <div><span>ABS: </span><mat-icon fontIcon="check_circle"></mat-icon></div>
   </div>
   <div>
-    <label for="shown_name">Car mark and model: </label>
-    <input id="shown_name" [(ngModel)]="car.name" placeholder="name">
+    <label for="name">Car mark and model: </label>
+    <input id="name" [(ngModel)]="car.name" placeholder="name">
   </div>
   <button type="button" (click)="goBack()">go back</button>
   <button type="button" (click)="save()">save</button>

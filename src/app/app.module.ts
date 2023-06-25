@@ -12,6 +12,7 @@ import { CarsComponent } from './cars/cars.component';
 import { CarSearchComponent } from './car-search/car-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import {MatIconModule} from "@angular/material/icon";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {MatIconModule} from "@angular/material/icon";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
